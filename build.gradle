@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+
+mainClassName = 'com.reed.think.Application'
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile 'org.springframework.data:spring-data-redis:1.8.0.RELEASE'
+    testCompile("junit:junit")
+}
+
+jar {
+    baseName = 'spring-redis'
+    version = '0.1.0'
+}
